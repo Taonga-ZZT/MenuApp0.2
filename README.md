@@ -1,56 +1,96 @@
-# Welcome to your Expo app 👋
+# Christoffel's Restaurant Menu App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Features
 
-## Get started
+### Home Screen
 
-1. Install dependencies
+* Displays the complete restaurant menu.
+* Shows the total number of menu items.
+* Calculates and displays the average price for:
 
-   ```bash
-   npm install
-   ```
+  * Starters
+  * Mains
+  * Desserts
+* Displays the total value of all menu items.
 
-2. Start the app
+### Manage Menu Screen
 
-   ```bash
-   npx expo start
-   ```
+* Add new menu items.
+* Enter:
 
-In the output, you'll find options to open the app in a
+  * Dish name
+  * Description
+  * Course
+  * Price
+* Remove menu items from the menu.
+* Automatically updates all screens when changes are made.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Guest Filter Screen
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+* Filter menu items by course.
+* View only:
 
-## Get a fresh project
+  * Starters
+  * Mains
+  * Desserts
+* Provides a simple browsing experience for guests.
 
-When you're ready, run:
+---
 
-```bash
-npm run reset-project
+## Technologies Used
+
+* React Native
+* Expo
+* TypeScript
+* React Navigation
+* Context API
+* Expo Vector Icons
+
+---
+
+## Project Structure
+
+```text
+App.tsx
+MenuContext.tsx
+
+screens/
+├── HomeScreen.tsx
+├── ManageMenuScreen.tsx
+└── GuestFilterScreen.tsx
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-### Other setup steps
+## State Management
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+The application uses the React Context API to manage menu data across multiple screens.
 
-## Learn more
+Functions provided by the context:
 
-To learn more about developing your project with Expo, look at the following resources:
+* addMenuItem()
+* deleteMenuItem()
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+This allows all screens to access and update the same menu data without passing props between components.
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+## How to Run the Project
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Start the Expo development server:
+
+```bash
+npx expo start
+```
+
+3. Scan the QR code using Expo Go on a mobile device or run the project in an emulator.
+
+---
+
+
