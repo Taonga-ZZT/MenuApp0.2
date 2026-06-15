@@ -8,7 +8,7 @@ import HomeScreen from "./screens/HomeScreen";
 import ManageMenuScreen from "./screens/ManageMenuScreen";
 import GuestFilterScreen from "./screens/GuestFilterScreen";
 
-import { MenuProvider } from "../MenuContext";
+import { MenuProvider } from "./MenuContext";
 
 const Tab = createBottomTabNavigator();
 
